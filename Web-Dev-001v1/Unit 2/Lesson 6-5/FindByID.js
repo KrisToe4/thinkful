@@ -7,7 +7,9 @@ const scratchData = [
   ];
   
   function findById(items, idNum) {
-    // your code here
+      let foundItem = null;
+
+      return foundItem;
   }
   
   //
