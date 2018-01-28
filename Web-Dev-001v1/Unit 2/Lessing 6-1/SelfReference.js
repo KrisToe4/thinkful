@@ -4,7 +4,7 @@ function personMaker() {
       lastName: 'Jones',
 
       fullName: function() {
-          return this.firstName;
+          return this.firstName + ' ' + this.lastName;
       }
     };
     return person;
