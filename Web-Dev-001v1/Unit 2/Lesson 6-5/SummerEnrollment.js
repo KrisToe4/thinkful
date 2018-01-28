@@ -19,6 +19,13 @@ const studentData = [
   function enrollInSummerSchool(students) {
     let summerStudents = [];
 
+    students.forEach(function(student) {
+
+        let modifiedStudent = student;
+
+        summerStudents.push(student);
+    });
+
     return summerStudents;
   }
   
