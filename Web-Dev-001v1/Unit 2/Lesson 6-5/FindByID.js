@@ -10,7 +10,9 @@ const scratchData = [
       let foundItem = null;
 
       items.forEach(function(item) {
-
+        if (item.id == idNum) {
+            foundItem = item;
+        };
       });
 
       return foundItem;
