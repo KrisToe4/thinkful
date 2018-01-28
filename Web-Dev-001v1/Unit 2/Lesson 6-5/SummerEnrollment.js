@@ -22,6 +22,7 @@ const studentData = [
     students.forEach(function(student) {
 
         let modifiedStudent = student;
+        modifiedStudent.status = 'In Summer school';
 
         summerStudents.push(student);
     });
