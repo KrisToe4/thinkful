@@ -3,7 +3,7 @@ function updateObject(obj) {
     obj['bar'] = 'bar';
 
     obj.bizz = "bizz";
-    obj['bang'] = 'bang';
+    obj["bang"] = 'bang';
 
     return obj;
   }
