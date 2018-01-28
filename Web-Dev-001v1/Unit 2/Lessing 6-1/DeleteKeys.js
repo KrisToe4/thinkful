@@ -1,8 +1,11 @@
 function keyDeleter(obj) {
-    delete (obj.foo);
-    delete (obj.bar);
 
-    return obj;
+    let newObj = obj;
+
+    delete (newObj.foo);
+    delete (newObj.bar);
+
+    return newObj;
   }
   
   var sampleObj = {
