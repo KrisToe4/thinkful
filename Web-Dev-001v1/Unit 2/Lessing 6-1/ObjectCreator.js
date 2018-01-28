@@ -5,6 +5,9 @@ function createMyObject() {
   };
 
   newObject['olly olly'] = "oxen free";
+  newObject.sayHello = function() {
+    return "hello";
+  };
 
   return newObject;
 }
