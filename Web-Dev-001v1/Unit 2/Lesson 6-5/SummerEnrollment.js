@@ -17,7 +17,9 @@ const studentData = [
   ];
   
   function enrollInSummerSchool(students) {
-    // your code here
+    let summerStudents = [];
+
+    return summerStudents;
   }
   
   /* From here down, you are not expected to understand.... for now :)
