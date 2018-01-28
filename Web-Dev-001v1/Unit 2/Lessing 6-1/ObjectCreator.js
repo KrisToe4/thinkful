@@ -1,5 +1,8 @@
 function createMyObject() {
-  const newObject = {};
+  const newObject = {
+      foo: 'bar',
+      answetToUniverse: 42
+  };
 
   return newObject;
 }
