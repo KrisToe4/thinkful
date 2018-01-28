@@ -1,8 +1,10 @@
 function createMyObject() {
   const newObject = {
       foo: 'bar',
-      answetToUniverse: 42
+      answerToUniverse: 42
   };
+
+  newObject['olly olly'] = "oxen free";
 
   return newObject;
 }
