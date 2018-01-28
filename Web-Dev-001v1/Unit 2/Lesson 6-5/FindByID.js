@@ -9,6 +9,10 @@ const scratchData = [
   function findById(items, idNum) {
       let foundItem = null;
 
+      items.forEach(function(item) {
+
+      });
+
       return foundItem;
   }
   
