@@ -1,7 +1,9 @@
 function makeStudentsReport(data) {
   let reports = [];
 
-  reports.push(`${data[0].name}: ${data[0].grade}`);
+  Object.keys(data).forEach(function(student) {
+    reports.push(`${data[student].name}: ${data[student].grade}`);
+  });
 
   return reports;
 }
