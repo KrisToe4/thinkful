@@ -1,6 +1,8 @@
 function makeStudentsReport(data) {
   let reports = [];
 
+  reports.push(`${data[0].name}: ${data[0].grade}`);
+
   return reports;
 }
 
