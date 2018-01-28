@@ -1,5 +1,7 @@
 function makeStudentsReport(data) {
-  // your code here
+  let reports = [];
+
+  return reports;
 }
 
 /* From here down, you are not expected to 
