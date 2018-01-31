@@ -18,13 +18,16 @@ const objectB = {
 const expectedKeys = ["id", "name", "age", "city"];
 
 function validateKeys(object, expectedKeys) {
-    let bKeysMatch = false;
+    let bKeysMatch = [false, false, false, false];
 
     Object.keys(object).forEach(function(key){
         
     });
 
-    return bKeysMatch;
+    return (bKeysMatch[0] &&
+            bKeysMatch[1] &&
+            bKeysMatch[2] &&
+            bKeysMatch[3]);
 }
 
 /* From here down, you are not expected to 
