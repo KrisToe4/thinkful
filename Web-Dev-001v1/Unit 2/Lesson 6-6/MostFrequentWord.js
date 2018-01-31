@@ -26,8 +26,12 @@ function mostFrequentWord(text) {
 
     // We use the 'in' operator to check if an object already contains a key.
     if (words[i] in wordFrequencies) {
+
+      // If it does we increment the value
       wordFrequencies[words[i]]++;
     } else {
+
+      // Otherwise we add the new word to our object and set its initial value at 1
       wordFrequencies[words[i]] = 1;
     }
   }
