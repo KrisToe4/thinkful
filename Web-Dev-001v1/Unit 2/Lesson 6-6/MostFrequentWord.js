@@ -35,6 +35,11 @@ function mostFrequentWord(text) {
       wordFrequencies[words[i]] = 1;
     }
   }
+
+  // Now we need to go through our word frequency values to find the biggest
+  // To do that we want to store both the word itself and its count value
+  // as two seperate variables. This lets us keep track of which word we need
+  // to return at the end.
   let currentMaxKey = Object.keys(wordFrequencies)[0];
   let currentMaxCount = wordFrequencies[currentMaxKey];
 
