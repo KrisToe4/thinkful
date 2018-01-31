@@ -21,7 +21,9 @@ function validateKeys(object, expectedKeys) {
     let bKeysMatch = [false, false, false, false];
 
     Object.keys(object).forEach(function(key){
-        
+        for (let i = 0; i < 4; i++) {
+            
+        }
     });
 
     return (bKeysMatch[0] &&
