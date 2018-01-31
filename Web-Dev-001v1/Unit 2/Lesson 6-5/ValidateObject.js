@@ -18,27 +18,23 @@ const objectB = {
 const expectedKeys = ["id", "name", "age", "city"];
 
 function validateKeys(object, expectedKeys) {
-    let bKeysMatch = [false, false, false, false];
+    
+    let isValid = true;
 
-    Object.keys(object).forEach(function(key){
-        let extra_key = true;
+    expectedKeys.forEach(function(key) {
 
-        for (let i = 0; i < 4; i++) {
-
-            if (expectedKeys[i] === key) {
-
-                bKeysMatch[i] = true;
-                extra_key = false;
-            }
-        }
-
-        if (extra_key) {
-            // Indicate invalidity by resetting the key match array
-            bKeysMatch = [false, false, false, false];
+        // If our object doesn't contain each of our expected keys, set the valid flag to false
+        if (Object.keys(object).find(objectKey => objectKey === key) === undefined) {
+            isValid = false;
         }
     });
 
-    return bKeysMatch[0]&&bKeysMatch[1]&&bKeysMatch[2]&&bKeysMatch[3];
+    // Now also check if we have any extra/missing keys
+    if (Object.keys(object).length !== 4) {
+        isValid = false;
+    }
+
+    return isValid;
 }
 
 /* From here down, you are not expected to 
