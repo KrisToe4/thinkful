@@ -22,14 +22,13 @@ function validateKeys(object, expectedKeys) {
 
     Object.keys(object).forEach(function(key){
         for (let i = 0; i < 4; i++) {
-            
+            if (expectedKeys[i] === key) {
+                bKeysMatch[i] = true;
+            }
         }
     });
 
-    return (bKeysMatch[0] &&
-            bKeysMatch[1] &&
-            bKeysMatch[2] &&
-            bKeysMatch[3]);
+    return bKeysMatch[0]&&bKeysMatch[1]&&bKeysMatch[2]&&bKeysMatch[3];
 }
 
 /* From here down, you are not expected to 
