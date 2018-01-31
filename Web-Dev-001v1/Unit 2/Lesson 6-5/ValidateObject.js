@@ -18,7 +18,9 @@ const objectB = {
 const expectedKeys = ["id", "name", "age", "city"];
 
 function validateKeys(object, expectedKeys) {
-  // your code here
+    let bKeysMatch = false;
+
+    return bKeysMatch;
 }
 
 /* From here down, you are not expected to 
