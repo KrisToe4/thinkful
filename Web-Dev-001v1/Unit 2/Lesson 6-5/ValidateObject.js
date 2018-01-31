@@ -20,6 +20,10 @@ const expectedKeys = ["id", "name", "age", "city"];
 function validateKeys(object, expectedKeys) {
     let bKeysMatch = false;
 
+    Object.keys(object).forEach(function(key){
+        
+    });
+
     return bKeysMatch;
 }
 
