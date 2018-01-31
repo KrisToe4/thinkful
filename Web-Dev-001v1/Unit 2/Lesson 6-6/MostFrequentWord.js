@@ -1,9 +1,18 @@
 function getTokens(rawString) {
-  // NB: `.filter(Boolean)` removes any falsy items from an array
+
   return rawString
-    .toLowerCase()
-    .split(/[ ,!.";:-]+/)
+    // This function converts the string to all lower case
+    .toLowerCase() 
+    // This function splits the word into an array of parts based 
+    // on a list of character values represented by a string that
+    // represents a Regular Expression 
+    // Go to https://regexr.com/ for an online tool to help learn
+    .split(/[ ,!.";:-]+/) 
+    // This function removes any falsy items from the array of words
+    // In this case those would be control characters and other 
+    // things we don't want to process
     .filter(Boolean)
+    // This function sorts the word array into alphabetic order
     .sort();
 }
 
