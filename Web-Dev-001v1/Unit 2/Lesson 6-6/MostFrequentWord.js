@@ -19,6 +19,9 @@ function mostFrequentWord(text) {
   // Now that we have our wordlist, we need to create a "dictionary" of 
   // word:count pairs. We'll use an object for this.
   let wordFrequencies = {};
+
+  // To build our word count we're going to iterate over the word
+  // array using a for-loop.
   for (let i = 0; i <= words.length; i++) {
     if (words[i] in wordFrequencies) {
       wordFrequencies[words[i]]++;
