@@ -21,10 +21,20 @@ function validateKeys(object, expectedKeys) {
     let bKeysMatch = [false, false, false, false];
 
     Object.keys(object).forEach(function(key){
+        let extra_key = true;
+
         for (let i = 0; i < 4; i++) {
+
             if (expectedKeys[i] === key) {
+
                 bKeysMatch[i] = true;
+                extra_key = false;
             }
+        }
+
+        if (extra_key) {
+            // Indicate invalidity by resetting the key match array
+            bKeysMatch = [false, false, false, false];
         }
     });
 
