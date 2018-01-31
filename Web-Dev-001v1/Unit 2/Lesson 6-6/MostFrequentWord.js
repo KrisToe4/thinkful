@@ -23,6 +23,8 @@ function mostFrequentWord(text) {
   // To build our word count we're going to iterate over the word
   // array using a for-loop.
   for (let i = 0; i <= words.length; i++) {
+
+    // We use the 'in' operator to check if an object already contains a key.
     if (words[i] in wordFrequencies) {
       wordFrequencies[words[i]]++;
     } else {
