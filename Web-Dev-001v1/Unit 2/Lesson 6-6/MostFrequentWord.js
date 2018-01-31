@@ -7,6 +7,9 @@ function getTokens(rawString) {
     .sort();
 }
 
+// Function accepts a block of text as an incoming parameter
+// which is assumed to be a string.
+// Return Value: Most Frequent Word as a String
 function mostFrequentWord(text) {
   let words = getTokens(text);
   let wordFrequencies = {};
