@@ -46,6 +46,9 @@ function mostFrequentWord(text) {
   // Loop through our objects keys using a shorthand version of
   // Object.keys(wordFrequencies).forEach(function(word){});
   for (let word in wordFrequencies) {
+
+    // Check if this word qualifies as the current most frequent
+    // and if so update our temporarily variables
     if (wordFrequencies[word] > currentMaxCount) {
       currentMaxKey = word;
       currentMaxCount = wordFrequencies[word];
