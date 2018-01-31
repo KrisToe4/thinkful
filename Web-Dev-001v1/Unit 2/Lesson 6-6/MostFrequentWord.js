@@ -54,5 +54,7 @@ function mostFrequentWord(text) {
       currentMaxCount = wordFrequencies[word];
     }
   }
+
+  // Finally return the most frequently used word as a string
   return currentMaxKey;
 }
