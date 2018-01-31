@@ -11,7 +11,11 @@ function getTokens(rawString) {
 // which is assumed to be a string.
 // Return Value: Most Frequent Word as a String
 function mostFrequentWord(text) {
+
+  // First build an array of strings representing the individual
+  // words in our incoming text
   let words = getTokens(text);
+  
   let wordFrequencies = {};
   for (let i = 0; i <= words.length; i++) {
     if (words[i] in wordFrequencies) {
