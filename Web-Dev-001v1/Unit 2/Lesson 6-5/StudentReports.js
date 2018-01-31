@@ -1,10 +1,11 @@
 function makeStudentsReport(data) {
   let reports = [];
 
-  for (let i = 0; i < data.length; i++) {
-    let student = data[i];
-    reports[i] = `${student.name}: ${student.grade}`;
-  }
+  Object.keys(data).forEach(function(index) {
+    let student = data[index];
+
+    reports.push(`${student.name}: ${student.grade}`);
+  });
 
   return reports;
 }
@@ -20,24 +21,24 @@ function makeStudentsReport(data) {
 
 function testIt() {
   const testData = [
-    { name: 'Jane Doe', grade: 'A' },
-    { name: 'John Dough', grade: 'B' },
-    { name: 'Jill Do', grade: 'A' },
+    { name: "Jane Doe", grade: "A" },
+    { name: "John Dough", grade: "B" },
+    { name: "Jill Do", grade: "A" }
   ];
 
-  const expectations = ['Jane Doe: A', 'John Dough: B', 'Jill Do: A'];
+  const expectations = ["Jane Doe: A", "John Dough: B", "Jill Do: A"];
 
   const results = makeStudentsReport(testData);
 
   if (!(results && results instanceof Array)) {
-    console.error('FAILURE: `makeStudentsReport` must return an array');
+    console.error("FAILURE: `makeStudentsReport` must return an array");
     return;
   }
   if (results.length !== testData.length) {
     console.error(
-      'FAILURE: test data had length of ' +
+      "FAILURE: test data had length of " +
         testData.length +
-        ' but `makeStudentsReport` returned array of length ' +
+        " but `makeStudentsReport` returned array of length " +
         results.length
     );
     return;
@@ -50,12 +51,12 @@ function testIt() {
       })
     ) {
       console.error(
-        'FAILURE: `makeStudentsReport` is not ' + 'producing expected strings'
+        "FAILURE: `makeStudentsReport` is not " + "producing expected strings"
       );
       return;
     }
   }
-  console.log('SUCCESS: `makeStudentsReport` is working');
+  console.log("SUCCESS: `makeStudentsReport` is working");
 }
 
 testIt();
